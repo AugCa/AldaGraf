@@ -1,5 +1,4 @@
 // Ändra inte på paketet
-package alda.graph;
 
 
 import static org.junit.Assert.*;
@@ -14,7 +13,7 @@ public class UndirectedGraphTest {
 
     private static final String[] STANDARD_NODES = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
 
-    private alda.graph.UndirectedGraph<String> graph = new MyUndirectedGraph<>();
+    private UndirectedGraph<String> graph = new MyUndirectedGraph<>();
 
     private void add(String... nodes) {
         for (String node : nodes) {
@@ -190,7 +189,7 @@ public class UndirectedGraphTest {
     @Test
     public void testMinimumSpanningTree() {
         createExampleGraph();
-        alda.graph.UndirectedGraph<String> mst = graph.minimumSpanningTree();
+        UndirectedGraph<String> mst = graph.minimumSpanningTree();
 
         int totalEdges = 0;
         int totalCost = 0;
@@ -227,7 +226,7 @@ public class UndirectedGraphTest {
         connect("V5", "V7", 6);
         connect("V6", "V7", 1);
 
-        alda.graph.UndirectedGraph<String> mst = graph.minimumSpanningTree();
+        UndirectedGraph<String> mst = graph.minimumSpanningTree();
 
         int totalEdges = 0;
         int totalCost = 0;
